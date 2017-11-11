@@ -1,0 +1,82 @@
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe.config
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.pdb
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csprojResolveAssemblyReference.cache
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Form1.resources
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Properties.Resources.resources
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csproj.GenerateResource.Cache
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.exe
+c:\users\andriy\documents\visual studio 2013\Projects\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.pdb
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe.config
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.exe
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.pdb
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.pdb
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csprojResolveAssemblyReference.cache
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Form1.resources
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Properties.Resources.resources
+D:\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csproj.GenerateResource.Cache
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe.config
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.exe
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.pdb
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.pdb
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Controls.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.DebuggerVisualizers (2010).dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Fuzzy.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Genetic.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.Formats.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.IPPrototyper.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.MachineLearning.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Math.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Neuro.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.Lego.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.Surveyor.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.TeRK.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.DirectShow.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.FFMPEG.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.Kinect.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.VFW.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.Ximea.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Vision.dll
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Controls.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Fuzzy.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Genetic.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.Formats.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.MachineLearning.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Math.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Neuro.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.Lego.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.Surveyor.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Robotics.TeRK.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.DirectShow.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.FFMPEG.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.Kinect.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.VFW.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Video.Ximea.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Vision.xml
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Form1.resources
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Properties.Resources.resources
+\\Mac\Home\Documents\nulp5\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csproj.GenerateResource.Cache
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe.config
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.exe
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.pdb
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.exe
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\SearchSimilarImages.pdb
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.dll
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.dll
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Math.dll
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.xml
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Imaging.xml
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Debug\AForge.Math.xml
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csprojResolveAssemblyReference.cache
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Form1.resources
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.Properties.Resources.resources
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Debug\SearchSimilarImages.csproj.GenerateResource.Cache
