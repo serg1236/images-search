@@ -14,7 +14,11 @@ namespace SearchSimilarImages
     {
         public Dictionary<string, Dictionary<string, double>> GridData { set; get; }
 
+        private ClassificationType Type = ClassificationType.NORMAL;
         private ClassificationMode Mode = ClassificationMode.INNER;
+        private int Cols;
+        private int Rows;
+        private string ImagePath;
         private List<List<string>> Groups;
 
         public Matrix(Dictionary<string, Dictionary<string, double>> gridData)
@@ -27,6 +31,22 @@ namespace SearchSimilarImages
             Classify();
             BuildGrid();
             
+        }
+
+        public Matrix(string imagePath, int cols, int rows, Dictionary<string, Dictionary<string, double>> gridData)
+        {
+            this.GridData = gridData;
+            this.ImagePath = imagePath;
+            this.Cols = cols;
+            this.Rows = rows;
+            this.Type = ClassificationType.SELF;
+            InitializeComponent();
+            groupCountControl.Minimum = 1;
+            groupCountControl.Maximum = gridData.Keys.Count;
+            groupCountControl.Value = gridData.Keys.Count > 1 ? 2 : 1;
+            Classify();
+            BuildGrid();
+
         }
 
         private void BuildGrid()
@@ -94,10 +114,28 @@ namespace SearchSimilarImages
             var groupIndex = groupsList.SelectedIndex;
             foreach (var path in Groups[groupIndex])
             {
-                var bm = new Bitmap(Image.FromFile(path));
+                var bm = getImage(path, Type);
                 imageList.AddImage(bm, path);
 
                 imagesListView.AddRow(path, path.Split(Path.DirectorySeparatorChar).Last(), path);
+            }
+        }
+
+        private Bitmap getImage(string key, ClassificationType type)
+        {
+            if (type == ClassificationType.SELF)
+            {
+                var dimensions = key.Split(',').Select(x => int.Parse(x));
+                var bitmap = new Bitmap(Image.FromFile(ImagePath));
+                var rectangle = new Rectangle(bitmap.Width / Cols * dimensions.ElementAt(0),
+                    bitmap.Height / Rows * dimensions.ElementAt(1),
+                    bitmap.Width / Cols,
+                    bitmap.Height / Rows);
+                return ImageUtils.CropImage(bitmap, rectangle);
+            }
+            else
+            {
+                return new Bitmap(Image.FromFile(key));
             }
         }
 

@@ -38,6 +38,33 @@ namespace SearchSimilarImages
             return result;
         }
 
+        public static Dictionary<string, Dictionary<string, double>> calculate(List<Point>[,] data) 
+        {
+            var result = new Dictionary<string, Dictionary<string, double>>();
+            for (int i = 0; i < data.GetLength(0); i++)
+            {
+                for (int j = 0; j < data.GetLength(1); j++)
+                {
+                    result.Add(i + "," + j, getRow(data[i, j], data));
+                }
+            }
+            return result;
+        }
+
+        private static Dictionary<string, double> getRow(List<Point> keydata, List<Point>[,] data)
+        {
+            var result = new Dictionary<string, double>();
+            for (int i = 0; i < data.GetLength(0); i++)
+            {
+                for (int j = 0; j < data.GetLength(1); j++)
+                {
+                    result.Add(i + "," + j, getDifference(keydata, data[i, j]));
+
+                }
+            }
+            return result;
+        }
+
         private static double getDifference(List<Point> data1, List<Point> data2)
         {
             double sum = 0.0;
@@ -49,7 +76,7 @@ namespace SearchSimilarImages
                 {
                     sum += Math.Pow(point1.Y - point2[0].Y, 2.0);
                 }
-                else 
+                else
                 {
                     sum += Math.Pow(point1.Y, 2.0);
                 }

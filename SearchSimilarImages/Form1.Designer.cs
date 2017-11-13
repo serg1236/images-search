@@ -77,6 +77,8 @@
             this.chartsButton = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.matrixButton = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.sourceClassification = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.sourceImageBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iHistogramChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lBorderInput)).BeginInit();
@@ -161,7 +163,7 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(627, 384);
+            this.button3.Location = new System.Drawing.Point(605, 387);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(212, 46);
             this.button3.TabIndex = 19;
@@ -448,6 +450,7 @@
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 42;
             this.label2.Text = "Обмежити";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -512,7 +515,7 @@
             this.chartsButton.Enabled = false;
             this.chartsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chartsButton.ForeColor = System.Drawing.Color.White;
-            this.chartsButton.Location = new System.Drawing.Point(855, 384);
+            this.chartsButton.Location = new System.Drawing.Point(823, 387);
             this.chartsButton.Name = "chartsButton";
             this.chartsButton.Size = new System.Drawing.Size(117, 46);
             this.chartsButton.TabIndex = 49;
@@ -530,19 +533,45 @@
             this.matrixButton.Enabled = false;
             this.matrixButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matrixButton.ForeColor = System.Drawing.Color.White;
-            this.matrixButton.Location = new System.Drawing.Point(988, 384);
+            this.matrixButton.Location = new System.Drawing.Point(1047, 401);
             this.matrixButton.Name = "matrixButton";
-            this.matrixButton.Size = new System.Drawing.Size(155, 46);
+            this.matrixButton.Size = new System.Drawing.Size(96, 33);
             this.matrixButton.TabIndex = 50;
-            this.matrixButton.Text = "Класифікація";
+            this.matrixButton.Text = "Множина";
             this.matrixButton.UseVisualStyleBackColor = false;
             this.matrixButton.Click += new System.EventHandler(this.matrixButton_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(987, 378);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(111, 20);
+            this.label17.TabIndex = 51;
+            this.label17.Text = "Класифікація";
+            // 
+            // sourceClassification
+            // 
+            this.sourceClassification.BackColor = System.Drawing.Color.SteelBlue;
+            this.sourceClassification.Enabled = false;
+            this.sourceClassification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sourceClassification.ForeColor = System.Drawing.Color.White;
+            this.sourceClassification.Location = new System.Drawing.Point(945, 400);
+            this.sourceClassification.Name = "sourceClassification";
+            this.sourceClassification.Size = new System.Drawing.Size(96, 33);
+            this.sourceClassification.TabIndex = 52;
+            this.sourceClassification.Text = "Еталон";
+            this.sourceClassification.UseVisualStyleBackColor = false;
+            this.sourceClassification.Click += new System.EventHandler(this.sourceClassification_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1170, 676);
+            this.Controls.Add(this.sourceClassification);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.matrixButton);
             this.Controls.Add(this.chartsButton);
             this.Controls.Add(this.label15);
@@ -648,6 +677,8 @@
         private System.Windows.Forms.Button chartsButton;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button matrixButton;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button sourceClassification;
     }
 }
 

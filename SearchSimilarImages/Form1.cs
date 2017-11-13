@@ -19,6 +19,7 @@ namespace SearchSimilarImages
         public ResultsComparator Comparator { set; get; }
         public List<string> CurrentResults { set; get; }
         public Dictionary<string, List<Point>[,]> chartData;
+        public List<Point>[,] sourceImageData;
 
         public Form1()
         {
@@ -30,6 +31,7 @@ namespace SearchSimilarImages
         {
             chartsButton.Enabled = false;
             matrixButton.Enabled = false;
+            sourceClassification.Enabled = false;
             imageListControl.Clear();
             imlLargeIcons.Images.Clear();
             imlSmallIcons.Images.Clear();
@@ -91,6 +93,7 @@ namespace SearchSimilarImages
         {
             chartsButton.Enabled = false;
             matrixButton.Enabled = false;
+            sourceClassification.Enabled = false;
             var ofd = new OpenFileDialog
             {
                 Title = @"Виберіть зображення для порівняння",
@@ -122,7 +125,7 @@ namespace SearchSimilarImages
             List<ImageCell> sourceImageCells = getImageCells(preparedSourceImage, cellsColCount, cellsRowCount, gridColCount, gridRowCount);
             sourceImageBox.Image = (Image)preparedSourceImage;
             addToChartData(sourceImagePath, sourceImageCells, cellsColCount, cellsRowCount);
-            
+            sourceImageData = getChartDataEntry(sourceImageCells, cellsColCount, cellsRowCount);
             imageListControl.Items.Clear();
             imlLargeIcons.Images.Clear();
             imlSmallIcons.Images.Clear();
@@ -164,6 +167,7 @@ namespace SearchSimilarImages
             Refresh();
             chartsButton.Enabled = true;
             matrixButton.Enabled = true;
+            sourceClassification.Enabled = true;
             
         }
 
@@ -439,7 +443,12 @@ namespace SearchSimilarImages
 
         private void addToChartData(string key, List<ImageCell> imageCells, int columns, int rows)
         {
-            var chartDataEntry = new List<Point>[columns,rows];
+            this.chartData.Add(key, getChartDataEntry(imageCells, columns, rows));
+        }
+
+        private List<Point>[,] getChartDataEntry(List<ImageCell> imageCells, int columns, int rows)
+        {
+            var chartDataEntry = new List<Point>[columns, rows];
             var cells = new List<ImageCell>(imageCells);
             for (int i = 0; i < rows; i++)
             {
@@ -449,7 +458,7 @@ namespace SearchSimilarImages
                     cells.RemoveAt(0);
                 }
             }
-            this.chartData.Add(key, chartDataEntry);
+            return chartDataEntry;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -466,6 +475,16 @@ namespace SearchSimilarImages
         private void backgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sourceClassification_Click(object sender, EventArgs e)
+        {
+            new Matrix(sourceImagePath, sourceImageData.GetLength(0), sourceImageData.GetLength(1), MatrixCalculator.calculate(sourceImageData)).Show();
         }
     }
 

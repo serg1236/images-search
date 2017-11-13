@@ -119,4 +119,9 @@ namespace SearchSimilarImages
     {
         INNER, OUTER, INNER_OUTER
     }
+
+    enum ClassificationType
+    {
+        NORMAL, SELF
+    }
 }
