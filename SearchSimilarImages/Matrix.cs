@@ -28,6 +28,7 @@ namespace SearchSimilarImages
             groupCountControl.Minimum = 1;
             groupCountControl.Maximum = gridData.Keys.Count;
             groupCountControl.Value = gridData.Keys.Count > 1 ? 2 : 1;
+            imagesListView.ContextMenuStrip = copySelectedMenuStrip;
             Classify();
             BuildGrid();
             
@@ -44,6 +45,7 @@ namespace SearchSimilarImages
             groupCountControl.Minimum = 1;
             groupCountControl.Maximum = gridData.Keys.Count;
             groupCountControl.Value = gridData.Keys.Count > 1 ? 2 : 1;
+            imagesListView.ContextMenuStrip = copySelectedMenuStrip;
             Classify();
             BuildGrid();
 
@@ -136,6 +138,16 @@ namespace SearchSimilarImages
             else
             {
                 return new Bitmap(Image.FromFile(key));
+            }
+        }
+
+        private void copySelectedItem_Click(object sender, EventArgs e)
+        {
+            if (imagesListView.SelectedItems.Count > 0)
+            {
+                var item = imagesListView.SelectedItems[0];
+                Image image = item.ImageList.Images[item.ImageKey];
+                Clipboard.SetImage(image);
             }
         }
 

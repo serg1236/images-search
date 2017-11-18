@@ -42,11 +42,14 @@
             this.innerOuterRadioButton = new System.Windows.Forms.RadioButton();
             this.outerRadioButton = new System.Windows.Forms.RadioButton();
             this.innerRadioButton = new System.Windows.Forms.RadioButton();
+            this.copySelectedMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.copySelectedItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.matrixGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCountControl)).BeginInit();
+            this.copySelectedMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // matrixGridView
@@ -185,6 +188,21 @@
             this.innerRadioButton.UseVisualStyleBackColor = true;
             this.innerRadioButton.CheckedChanged += new System.EventHandler(this.innerRadioButton_CheckedChanged);
             // 
+            // copySelectedMenuStrip
+            // 
+            this.copySelectedMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copySelectedItem});
+            this.copySelectedMenuStrip.Name = "contextMenuStrip1";
+            this.copySelectedMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.copySelectedMenuStrip.Text = "Copy";
+            // 
+            // copySelectedItem
+            // 
+            this.copySelectedItem.Name = "copySelectedItem";
+            this.copySelectedItem.Size = new System.Drawing.Size(152, 22);
+            this.copySelectedItem.Text = "Copy";
+            this.copySelectedItem.Click += new System.EventHandler(this.copySelectedItem_Click);
+            // 
             // Matrix
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +217,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCountControl)).EndInit();
+            this.copySelectedMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -218,5 +237,7 @@
         private System.Windows.Forms.ListBox groupsList;
         private System.Windows.Forms.ListView imagesListView;
         private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.ContextMenuStrip copySelectedMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem copySelectedItem;
     }
 }
