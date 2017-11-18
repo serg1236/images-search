@@ -17,6 +17,41 @@ namespace SearchSimilarImages
             return ExtractGroups(treeRelations);
         }
 
+        public static List<Tuple<string, TreeNode>> ExtractTree(Dictionary<string, Dictionary<string, double>> GridData, ClassificationMode mode, int groupsCount)
+        {
+            var treeRelations = convertToNodes(GridData);
+            var tree =  new List<Tuple<string, TreeNode>>();
+            while (treeRelations.Keys.Count > groupsCount)
+            {
+                FindAndUnite(treeRelations, mode);
+            }
+            //mark root nodes
+            int i=1;
+            foreach (var node in treeRelations.Keys)
+            {
+                node.GroupRoot = "Група" + i++;
+            }
+            while (treeRelations.Keys.Count > 1)
+            {
+                FindAndUnite(treeRelations, mode);
+            }
+            addToTree(treeRelations.Keys.First(), null, tree);
+            return tree;
+        }
+
+        private static void addToTree(TreeNode node, TreeNode parent,List<Tuple<string, TreeNode>> tree) {
+            if(parent == null) {
+                tree.Add(new Tuple<string, TreeNode>("", node));
+            } else {
+                tree.Add(new Tuple<string, TreeNode>(parent.Id, node));
+            }
+            if(node is InnerNode) {
+                InnerNode iNode = (InnerNode)node;
+                addToTree(iNode.LeftNode, iNode, tree);
+                addToTree(iNode.RightNode, iNode, tree);
+            }
+        }
+
         private static void FindAndUnite(Dictionary<TreeNode, Dictionary<TreeNode, double>> treeRelations, ClassificationMode mode)
         {
             TreeNode node1 = null;

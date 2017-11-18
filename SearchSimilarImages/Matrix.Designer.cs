@@ -42,14 +42,23 @@
             this.innerOuterRadioButton = new System.Windows.Forms.RadioButton();
             this.outerRadioButton = new System.Windows.Forms.RadioButton();
             this.innerRadioButton = new System.Windows.Forms.RadioButton();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.copySelectedMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.copySelectedItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.treeBox = new System.Windows.Forms.PictureBox();
+            this.treePanel = new System.Windows.Forms.Panel();
+            this.stretchRadioButton = new System.Windows.Forms.RadioButton();
+            this.autoSizeRadioButton = new System.Windows.Forms.RadioButton();
+            this.saveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.matrixGridView)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCountControl)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.copySelectedMenuStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.treeBox)).BeginInit();
+            this.treePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // matrixGridView
@@ -65,6 +74,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -188,20 +198,85 @@
             this.innerRadioButton.UseVisualStyleBackColor = true;
             this.innerRadioButton.CheckedChanged += new System.EventHandler(this.innerRadioButton_CheckedChanged);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.saveButton);
+            this.tabPage3.Controls.Add(this.autoSizeRadioButton);
+            this.tabPage3.Controls.Add(this.stretchRadioButton);
+            this.tabPage3.Controls.Add(this.treePanel);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(738, 418);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Дендрограма";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // copySelectedMenuStrip
             // 
             this.copySelectedMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.copySelectedItem});
             this.copySelectedMenuStrip.Name = "contextMenuStrip1";
-            this.copySelectedMenuStrip.Size = new System.Drawing.Size(153, 48);
+            this.copySelectedMenuStrip.Size = new System.Drawing.Size(103, 26);
             this.copySelectedMenuStrip.Text = "Copy";
             // 
             // copySelectedItem
             // 
             this.copySelectedItem.Name = "copySelectedItem";
-            this.copySelectedItem.Size = new System.Drawing.Size(152, 22);
+            this.copySelectedItem.Size = new System.Drawing.Size(102, 22);
             this.copySelectedItem.Text = "Copy";
             this.copySelectedItem.Click += new System.EventHandler(this.copySelectedItem_Click);
+            // 
+            // treeBox
+            // 
+            this.treeBox.Location = new System.Drawing.Point(3, 3);
+            this.treeBox.Name = "treeBox";
+            this.treeBox.Size = new System.Drawing.Size(729, 375);
+            this.treeBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.treeBox.TabIndex = 0;
+            this.treeBox.TabStop = false;
+            // 
+            // treePanel
+            // 
+            this.treePanel.AutoScroll = true;
+            this.treePanel.Controls.Add(this.treeBox);
+            this.treePanel.Location = new System.Drawing.Point(3, 33);
+            this.treePanel.Name = "treePanel";
+            this.treePanel.Size = new System.Drawing.Size(735, 382);
+            this.treePanel.TabIndex = 1;
+            // 
+            // stretchRadioButton
+            // 
+            this.stretchRadioButton.AutoSize = true;
+            this.stretchRadioButton.Location = new System.Drawing.Point(6, 10);
+            this.stretchRadioButton.Name = "stretchRadioButton";
+            this.stretchRadioButton.Size = new System.Drawing.Size(118, 17);
+            this.stretchRadioButton.TabIndex = 2;
+            this.stretchRadioButton.Text = "За розміром вікна";
+            this.stretchRadioButton.UseVisualStyleBackColor = true;
+            this.stretchRadioButton.CheckedChanged += new System.EventHandler(this.stretchRadioButton_CheckedChanged);
+            // 
+            // autoSizeRadioButton
+            // 
+            this.autoSizeRadioButton.AutoSize = true;
+            this.autoSizeRadioButton.Checked = true;
+            this.autoSizeRadioButton.Location = new System.Drawing.Point(130, 10);
+            this.autoSizeRadioButton.Name = "autoSizeRadioButton";
+            this.autoSizeRadioButton.Size = new System.Drawing.Size(111, 17);
+            this.autoSizeRadioButton.TabIndex = 3;
+            this.autoSizeRadioButton.TabStop = true;
+            this.autoSizeRadioButton.Text = "Реальний розмір";
+            this.autoSizeRadioButton.UseVisualStyleBackColor = true;
+            this.autoSizeRadioButton.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(247, 7);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 4;
+            this.saveButton.Text = "Зберегти";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // Matrix
             // 
@@ -217,7 +292,12 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupCountControl)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.copySelectedMenuStrip.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.treeBox)).EndInit();
+            this.treePanel.ResumeLayout(false);
+            this.treePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -239,5 +319,11 @@
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ContextMenuStrip copySelectedMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem copySelectedItem;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.PictureBox treeBox;
+        private System.Windows.Forms.Panel treePanel;
+        private System.Windows.Forms.RadioButton autoSizeRadioButton;
+        private System.Windows.Forms.RadioButton stretchRadioButton;
+        private System.Windows.Forms.Button saveButton;
     }
 }

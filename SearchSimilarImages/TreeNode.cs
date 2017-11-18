@@ -7,6 +7,8 @@ namespace SearchSimilarImages
 {
     abstract class TreeNode
     {
+        public string Id { set; get; }
+        public string GroupRoot { set; get; }
         public virtual bool Equals(TreeNode node)
         {
             return ReferenceEquals(this, node);
@@ -20,6 +22,8 @@ namespace SearchSimilarImages
         public LeafNode(string imageName)
         {
             ImageName = imageName;
+            Id = imageName;
+            GroupRoot = "";
         }
 
         public override bool Equals(TreeNode node)
@@ -48,6 +52,8 @@ namespace SearchSimilarImages
         {
             LeftNode = leftNode;
             RightNode = rightNode;
+            Id = leftNode.Id + "_" + rightNode.Id;
+            GroupRoot = "";
         }
 
         public override bool Equals(TreeNode node)

@@ -1,0 +1,5 @@
+c:\master_degree\searc_image\TreeGenerator\TreeGenerator\bin\Debug\TreeGenerator.dll
+c:\master_degree\searc_image\TreeGenerator\TreeGenerator\bin\Debug\TreeGenerator.pdb
+c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.csprojResolveAssemblyReference.cache
+c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.dll
+c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.pdb

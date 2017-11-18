@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
+using TreeGenerator;
 
 namespace SearchSimilarImages
 {
@@ -25,13 +27,10 @@ namespace SearchSimilarImages
         {
             this.GridData = gridData;
             InitializeComponent();
-            groupCountControl.Minimum = 1;
-            groupCountControl.Maximum = gridData.Keys.Count;
-            groupCountControl.Value = gridData.Keys.Count > 1 ? 2 : 1;
-            imagesListView.ContextMenuStrip = copySelectedMenuStrip;
+            PostInit();
             Classify();
             BuildGrid();
-            
+            BuildTree();
         }
 
         public Matrix(string imagePath, int cols, int rows, Dictionary<string, Dictionary<string, double>> gridData)
@@ -42,13 +41,18 @@ namespace SearchSimilarImages
             this.Rows = rows;
             this.Type = ClassificationType.SELF;
             InitializeComponent();
-            groupCountControl.Minimum = 1;
-            groupCountControl.Maximum = gridData.Keys.Count;
-            groupCountControl.Value = gridData.Keys.Count > 1 ? 2 : 1;
-            imagesListView.ContextMenuStrip = copySelectedMenuStrip;
+            PostInit();
             Classify();
             BuildGrid();
+            BuildTree();
+        }
 
+        private void PostInit()
+        {
+            groupCountControl.Minimum = 1;
+            groupCountControl.Maximum = GridData.Keys.Count;
+            groupCountControl.Value = GridData.Keys.Count > 1 ? 2 : 1;
+            imagesListView.ContextMenuStrip = copySelectedMenuStrip;
         }
 
         private void BuildGrid()
@@ -72,7 +76,7 @@ namespace SearchSimilarImages
             groupsList.Items.Clear();
             foreach (var group in Groups)
             {
-                groupsList.Items.Add("Група " + groupsList.Items.Count);
+                groupsList.Items.Add("Група " + (groupsList.Items.Count + 1));
             }
             groupsList.SelectedIndex = 0;
         }
@@ -83,6 +87,7 @@ namespace SearchSimilarImages
             {
                 Mode = ClassificationMode.INNER;
                 Classify();
+                BuildTree();
             }
         }
 
@@ -92,6 +97,7 @@ namespace SearchSimilarImages
             {
                 Mode = ClassificationMode.OUTER;
                 Classify();
+                BuildTree();
             }
         }
 
@@ -101,12 +107,14 @@ namespace SearchSimilarImages
             {
                 Mode = ClassificationMode.INNER_OUTER;
                 Classify();
+                BuildTree();
             }
         }
 
         private void groupCountControl_ValueChanged(object sender, EventArgs e)
         {
             Classify();
+            BuildTree();
         }
 
         private void groupsList_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,6 +156,56 @@ namespace SearchSimilarImages
                 var item = imagesListView.SelectedItems[0];
                 Image image = item.ImageList.Images[item.ImageKey];
                 Clipboard.SetImage(image);
+            }
+        }
+
+        private void BuildTree()
+        {
+            TreeData.TreeDataTableDataTable dtTree =
+            new TreeData.TreeDataTableDataTable();
+            var tree = ClassificationUtil.ExtractTree(GridData, Mode, (int)groupCountControl.Value);
+            foreach (var treeEntry in tree)
+            {
+                TreeNode node = treeEntry.Item2;
+                var label = node is LeafNode ? ((LeafNode)node).ImageName.Split(Path.DirectorySeparatorChar).Last() : "";
+                dtTree.AddTreeDataTableRow(node.Id, treeEntry.Item1, label, node.GroupRoot);
+            }
+            //instantiate the object 
+            var myTree = new TreeBuilder(dtTree);
+            var rootId = tree.Find(t => t.Item1 == "").Item2.Id;
+            treeBox.Image = Image.FromStream(
+            myTree.GenerateTree(rootId,
+            System.Drawing.Imaging.ImageFormat.Bmp));
+
+        }
+
+        private void stretchRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (stretchRadioButton.Checked)
+            {
+                treeBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autoSizeRadioButton.Checked)
+            {
+                treeBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if(treeBox.Image != null) {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.FileName = "tree";
+                dialog.AddExtension = true;
+                dialog.Filter = "Image Files (*.jpg)|*.jpg";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                   treeBox.Image.Save(dialog.FileName, ImageFormat.Jpeg);
+                }
             }
         }
 
