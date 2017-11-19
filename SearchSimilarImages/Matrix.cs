@@ -183,6 +183,7 @@ namespace SearchSimilarImages
         {
             if (stretchRadioButton.Checked)
             {
+                treePanel.AutoScrollPosition = new Point(0, 0);
                 treeBox.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }

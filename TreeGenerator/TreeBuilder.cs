@@ -200,7 +200,7 @@ namespace TreeGenerator
             //check for intersection. line below should be remarked if not debugging
             //as it affects performance measurably.
             //OverlapExists();
-            Bitmap bmp = new Bitmap(imgWidth, imgHeight);
+            Bitmap bmp = new Bitmap(imgWidth, imgHeight + _VerticalSpace);
             gr = Graphics.FromImage(bmp);
             gr.Clear(_BGColor);
             DrawChart(RootNode, _LineColor);
@@ -466,6 +466,7 @@ namespace TreeGenerator
             SolidBrush drawBrush = new SolidBrush(_FontColor);
             Pen boxPen = new Pen(lineColor != null? lineColor : _LineColor, _LineWidth);
             StringFormat drawFormat = new StringFormat();
+            //drawFormat.FormatFlags = StringFormatFlags.NoWrap;
             drawFormat.Alignment = StringAlignment.Center;
             //find children
             var groupNumber = Regex.Match(oNode.Attributes["nodeNote"].InnerText, @"\d+").Value;
@@ -488,13 +489,15 @@ namespace TreeGenerator
             Rectangle currentRectangle = getRectangleFromNode(oNode);
             gr.DrawRectangle(boxPen, currentRectangle);
             gr.FillRectangle(new SolidBrush(_BoxFillColor), currentRectangle);
+            Rectangle stringRectangle = new Rectangle(currentRectangle.X - _HorizontalSpace / 2, currentRectangle.Y,
+                _HorizontalSpace, _VerticalSpace);
             // Create string to draw.
             String drawString = oNode.Attributes["nodeDescription"].InnerText +
                 Environment.NewLine +
                 oNode.Attributes["nodeNote"].InnerText;
             
             // Draw string to screen.
-            gr.DrawString(drawString, drawFont, drawBrush, currentRectangle, drawFormat);
+            gr.DrawString(drawString, drawFont, drawBrush, stringRectangle, drawFormat);
 
             //draw connecting lines
 
