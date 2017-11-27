@@ -3,3 +3,8 @@ c:\master_degree\searc_image\TreeGenerator\TreeGenerator\bin\Debug\TreeGenerator
 c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.csprojResolveAssemblyReference.cache
 c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.dll
 c:\master_degree\searc_image\TreeGenerator\TreeGenerator\obj\Debug\TreeGenerator.pdb
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\bin\Debug\TreeGenerator.dll
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\bin\Debug\TreeGenerator.pdb
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Debug\TreeGenerator.csprojResolveAssemblyReference.cache
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Debug\TreeGenerator.dll
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Debug\TreeGenerator.pdb

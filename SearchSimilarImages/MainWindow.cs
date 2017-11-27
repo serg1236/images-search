@@ -11,7 +11,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SearchSimilarImages
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
         private List<String> imageListPaths = new List<string>();
         private string[] _filesName;
@@ -21,7 +21,7 @@ namespace SearchSimilarImages
         public Dictionary<string, List<Point>[,]> chartData;
         public List<Point>[,] sourceImageData;
 
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
             cboStyle.SelectedIndex = 0;
@@ -116,6 +116,7 @@ namespace SearchSimilarImages
             int gridRowCount = int.Parse(gridRowCountTextBox.Text);
             int cellsColCount = int.Parse(imagesColCountTextBox.Text);
             int cellsRowCount = int.Parse(imagesRowCountTextBox.Text);
+            int maxDifference = 256 * cellsColCount * cellsRowCount * 2; 
             Bitmap preparedSourceImage = MakeGrayAndCut(sourceImageBox.Image);
             if (hisEqCheckbox.Checked)
             {
@@ -141,7 +142,9 @@ namespace SearchSimilarImages
                 int difference = ImageCell.calculateDifference(sourceImageCells, cells);
                 imlLargeIcons.AddImage(bitmap, imageListPaths[i]);
                 imlSmallIcons.AddImage(bitmap, imageListPaths[i]);
-                imageListControl.AddRow(imageListPaths[i], difference.ToString(), _filesName[i]);
+                double percentage = (1.0 - (double)difference / (double)maxDifference) * 100.0;
+                string caption = difference.ToString() + " (" + ((int)percentage).ToString() + "%)";
+                imageListControl.AddRow(imageListPaths[i], caption, _filesName[i]);
                 if (!this.chartData.ContainsKey(imageListPaths[i]))
                 {
                     addToChartData(imageListPaths[i], cells, cellsColCount, cellsRowCount);
@@ -501,7 +504,9 @@ namespace SearchSimilarImages
         }
         public int Compare(object x, object y)
         {
-            return int.Parse(((ListViewItem)x).Text) - int.Parse(((ListViewItem)y).Text);
+            string val1 = new String(((ListViewItem)x).Text.TakeWhile(Char.IsDigit).ToArray());
+            string val2 = new String(((ListViewItem)y).Text.TakeWhile(Char.IsDigit).ToArray());
+            return int.Parse(val1) - int.Parse(val2);
         }
     }
 }

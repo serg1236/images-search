@@ -68,10 +68,10 @@ C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Release
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Release\TreeGenerator.dll
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\bin\Release\TreeGenerator.pdb
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.csprojResolveAssemblyReference.cache
-C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.Form1.resources
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.Graphs.resources
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.Matrix.resources
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.Properties.Resources.resources
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.csproj.GenerateResource.Cache
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.exe
 C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.pdb
+C:\master_degree\searc_image\SearchSimilarImages\SearchSimilarImages\obj\Release\SearchSimilarImages.MainWindow.resources

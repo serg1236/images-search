@@ -20,7 +20,10 @@ namespace SearchSimilarImages
             LeftUpperCorner = leftUpperCorner;
             RightLowerCorner = rightLowerCorner;
             var values = new int[256];
-            var pointsSums = new Point[256];
+            var pointsSums = new Tuple<long, long>[256];
+            for (int i = 0; i < pointsSums.Length; i++) {
+                pointsSums[i] = new Tuple<long, long>(0L, 0L);
+            }
             //fragments
             for (var i = leftUpperCorner.X; i < rightLowerCorner.X; i++)
             {
@@ -28,22 +31,24 @@ namespace SearchSimilarImages
                 {
                     int colorValue = imageBitmap.GetPixel(i, j).R;
                     values[colorValue] += 1;
-                    pointsSums[colorValue].X += i;
-                    pointsSums[colorValue].Y += j;
+                    pointsSums[colorValue] = new Tuple<long, long>(pointsSums[colorValue].Item1 + i, pointsSums[colorValue].Item2 + j);
                 }
             }
             if (useSegments)
             {
                 //segments
-                var tempSums = new Point[256];
+                var tempSums = new Tuple<long, long>[256];
                 var tempValues = new int[256];
+                for (int i = 0; i < pointsSums.Length; i++)
+                {
+                    tempSums[i] = new Tuple<long, long>(0L, 0L);
+                }
                 for (var i = 0; i < 256; i++)
                 {
                     for (var j = 0; j <= i; j++)
                     {
                         tempValues[i] += values[j];
-                        tempSums[i].X += pointsSums[j].X;
-                        tempSums[i].Y += pointsSums[j].Y;
+                        tempSums[i] = new Tuple<long, long>(tempSums[i].Item1 + pointsSums[j].Item1, tempSums[i].Item2 + pointsSums[j].Item2);
                     }
                 }
                 pointsSums = tempSums;
@@ -54,18 +59,18 @@ namespace SearchSimilarImages
             
         }
 
-        private int[,] initGridValues(int[] characteristicValues, Point[] pointsSums, int rowCount, int colCount)
+        private int[,] initGridValues(int[] characteristicValues, Tuple<long, long>[] pointsSums, int rowCount, int colCount)
         {
 
-            var columnWidth = (RightLowerCorner.X - LeftUpperCorner.X) / colCount;
-            var rowHeight = (RightLowerCorner.Y - LeftUpperCorner.Y) / rowCount;
+            double columnWidth = (double)(RightLowerCorner.X - LeftUpperCorner.X) / (double)colCount;
+            double rowHeight = (double)(RightLowerCorner.Y - LeftUpperCorner.Y) / (double)rowCount;
             var values = new int[colCount, rowCount];
             for (var i = 0; i < 256; i++)
             {
                 if (characteristicValues[i] != 0)
                 {
-                    var avgX = pointsSums[i].X / characteristicValues[i];
-                    var avgY = pointsSums[i].Y / characteristicValues[i];
+                    var avgX = pointsSums[i].Item1 / characteristicValues[i];
+                    var avgY = pointsSums[i].Item2 / characteristicValues[i];
                     Point location = findGridCellIndex(values.GetLength(0), values.GetLength(1), avgX, avgY, columnWidth, rowHeight);
                     values[location.X, location.Y] += 1;
                     cellChartPoints.Add(new Point(i, location.Y * rowCount + location.X + 1));
@@ -78,19 +83,19 @@ namespace SearchSimilarImages
             return values;
         }
 
-        private Point findGridCellIndex(int columns, int rows, int avgX, int avgY, int columnWidth, int rowHeight)
+        private Point findGridCellIndex(int columns, int rows, long avgX, long avgY, double columnWidth, double rowHeight)
         {
             var cellWidth = RightLowerCorner.X - LeftUpperCorner.X;
             var cellHeight = RightLowerCorner.Y - LeftUpperCorner.Y;
             avgX -= LeftUpperCorner.X;
             avgY -= LeftUpperCorner.Y;
-            int i = avgX  / columnWidth;
+            int i = (int)(avgX  / columnWidth);
             if (i == columns)
             {
                 i = columns - 1;
             }
 
-            int j = avgY / rowHeight;
+            int j = (int)(avgY / rowHeight);
             if (j == rows)
             {
                 j = rows - 1;

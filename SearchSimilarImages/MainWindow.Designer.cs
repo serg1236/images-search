@@ -1,6 +1,6 @@
 ﻿namespace SearchSimilarImages
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.imageListControl = new System.Windows.Forms.ListView();
             this.imlLargeIcons = new System.Windows.Forms.ImageList(this.components);
             this.imlSmallIcons = new System.Windows.Forms.ImageList(this.components);
@@ -123,6 +123,7 @@
             this.faceDetectionCheckBox.TabIndex = 23;
             this.faceDetectionCheckBox.Text = "Використати пошук облич";
             this.faceDetectionCheckBox.UseVisualStyleBackColor = true;
+            this.faceDetectionCheckBox.Visible = false;
             this.faceDetectionCheckBox.CheckedChanged += new System.EventHandler(this.faceDetectionCheckBox_CheckedChanged);
             // 
             // hisEqCheckbox
@@ -565,7 +566,7 @@
             this.sourceClassification.UseVisualStyleBackColor = false;
             this.sourceClassification.Click += new System.EventHandler(this.sourceClassification_Click);
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -613,7 +614,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.Text = "Пошук подібних зображень";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sourceImageBox)).EndInit();
