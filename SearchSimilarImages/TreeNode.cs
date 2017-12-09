@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SearchSimilarImages
 {
-    abstract class TreeNode
+    public abstract class TreeNode
     {
         public string Id { set; get; }
         public string GroupRoot { set; get; }

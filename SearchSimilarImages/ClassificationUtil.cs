@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SearchSimilarImages
 {
-    class ClassificationUtil
+    public class ClassificationUtil
     {
         public static List<List<string>> Classify(Dictionary<string, Dictionary<string, double>> GridData, ClassificationMode mode, int groupsCount)
         {
@@ -150,12 +150,12 @@ namespace SearchSimilarImages
         }
     }
 
-    enum ClassificationMode
+    public enum ClassificationMode
     {
         INNER, OUTER, INNER_OUTER
     }
 
-    enum ClassificationType
+    public enum ClassificationType
     {
         NORMAL, SELF
     }

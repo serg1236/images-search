@@ -7,3 +7,4 @@ C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\bin\Release\TreeG
 C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\bin\Release\TreeGenerator.pdb
 C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Release\TreeGenerator.dll
 C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Release\TreeGenerator.pdb
+C:\master_degree\searc_image\SearchSimilarImages\TreeGenerator\obj\Release\TreeGenerator.csprojResolveAssemblyReference.cache

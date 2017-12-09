@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchSimilarImages", "Sear
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeGenerator", "TreeGenerator\TreeGenerator.csproj", "{32E6B1C5-E785-4AB3-9C3E-E5B26E16EA79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{34303F0E-3259-4CC0-8C4D-2EF362072755}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{32E6B1C5-E785-4AB3-9C3E-E5B26E16EA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32E6B1C5-E785-4AB3-9C3E-E5B26E16EA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32E6B1C5-E785-4AB3-9C3E-E5B26E16EA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34303F0E-3259-4CC0-8C4D-2EF362072755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34303F0E-3259-4CC0-8C4D-2EF362072755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34303F0E-3259-4CC0-8C4D-2EF362072755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34303F0E-3259-4CC0-8C4D-2EF362072755}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

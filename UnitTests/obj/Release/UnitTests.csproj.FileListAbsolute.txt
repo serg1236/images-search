@@ -1,0 +1,14 @@
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\UnitTests.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\UnitTests.pdb
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\SearchSimilarImages.exe
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\Accord.Vision.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\AForge.Imaging.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\AForge.Math.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\TreeGenerator.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\AForge.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\Accord.Imaging.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\SearchSimilarImages.pdb
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\bin\Release\TreeGenerator.pdb
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\obj\Release\UnitTests.csprojResolveAssemblyReference.cache
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\obj\Release\UnitTests.dll
+C:\master_degree\searc_image\SearchSimilarImages\UnitTests\obj\Release\UnitTests.pdb

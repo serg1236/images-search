@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace SearchSimilarImages
 {
-    class ImageCell
+    public class ImageCell
     {
         public Point LeftUpperCorner { set; get; }
         public Point RightLowerCorner { set; get; }

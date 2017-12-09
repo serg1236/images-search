@@ -103,6 +103,7 @@ namespace SearchSimilarImages
             if (dr != DialogResult.OK) return;
             sourceImageBox.Load(ofd.FileName);
             sourceImagePath = ofd.FileName;
+            button3.Enabled = true;
             //sourceImageBox.Width = sourceImageBox.Image.Width;
             //sourceImageBox.Height = sourceImageBox.Image.Height;
         }
